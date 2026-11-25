@@ -580,12 +580,13 @@ elif st.session_state.active_page == "Model Details":
             st.markdown("#### Feature Engineering Pipeline")
             pipe_df = pd.DataFrame(
                 {
-                    "Stage": ["Categorical Features", "Numerical Features", "Total Input Columns", "Model Bundle"],
+                    "Stage": ["Categorical Features", "Numerical Features", "Total Input Columns", "Model Bundle","Model Accuracy",],
                     "Details": [
                         "One-Hot Encoded (16 columns via saved OHE)",
                         "Z-Score Standardized (11 columns)",
                         "27 aligned features",
                         "Hotel_Cancellation_model_prod.pkl (Standalone)",
+                        "~80% (Held-out Test Set)",
                     ],
                 }
             )
